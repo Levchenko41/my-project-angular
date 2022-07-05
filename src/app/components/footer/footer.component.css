@@ -1,0 +1,15 @@
+.navbar{
+    background: linear-gradient(135deg,#0143a3,#0273d4);
+    color:white;
+    
+   
+   
+}
+.logo{
+    width :45px;
+    
+}
+.footer-text{
+    display: flex;
+    align-items: center;
+}

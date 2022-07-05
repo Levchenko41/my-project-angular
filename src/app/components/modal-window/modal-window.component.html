@@ -1,0 +1,56 @@
+<app-user-data [userData]="data"></app-user-data>
+<div class="page-edit block mt-3">
+  <form
+    (ngSubmit)="onSubmit()"
+    [formGroup]="formEdit"
+    class="text-center register-page modal-container p-3"
+  >
+    <h1 class="fs-3 mb-3">Сhange personal data</h1>
+
+    <div class="text-field text-field_floating-3 mb-3">
+      <input
+        class="text-field__input"
+        formControlName="name"
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Input name"
+      />
+      <label class="text-field__label" for="email">Name</label>
+    </div>
+
+    <div class="text-field text-field_floating-3 mb-3">
+      <input
+        class="text-field__input"
+        formControlName="lastName"
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Input lastName"
+      />
+      <label class="text-field__label" for="email">Last name</label>
+    </div>
+
+    <div class="text-field text-field_floating-3 mb-3">
+      <input
+        class="text-field__input"
+        formControlName="email"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Input email"
+      />
+      <label class="text-field__label" for="email">Email</label>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        [disabled]="formEdit.invalid"
+        class="btn btn-primary"
+      >
+        Сhange data
+      </button>
+    </div>
+  </form>
+</div>

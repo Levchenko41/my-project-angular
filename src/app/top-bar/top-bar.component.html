@@ -1,0 +1,23 @@
+<div class="navbar flex-column flex-md-row">
+  <div class="container">
+    <a [routerLink]="['/']" class="logo-header">
+      <h1 class="">My Project</h1>
+    </a>
+
+    <div *ngIf="!isAuth()" class="header-nav">
+      <button class="btn btn-primary ms-3" routerLink="/login">Sign in</button>
+      <button class="btn btn-primary ms-3" routerLink="/register">
+        Registration
+      </button>
+    </div>
+    <div *ngIf="isAuth()" class="header-nav">
+      <button
+        class="btn btn-primary ms-3"
+        (click)="signOut()"
+        routerLink="/users"
+      >
+        logout
+      </button>
+    </div>
+  </div>
+</div>

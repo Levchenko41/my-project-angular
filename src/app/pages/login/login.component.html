@@ -1,0 +1,22 @@
+<div class="container text-center auth">
+  <form [formGroup]="form" class="input-page text-center p-3 mt-3 block" (ngSubmit)="onSubmit()">
+    <h1 class="fs-3 mb-3">Please sign in</h1>
+    <div class="mb-3">
+      <div class="text-field text-field_floating-3">
+        <input class="text-field__input" formControlName="email" type="email" id="email" name="email" placeholder="Input email">
+        <label class="text-field__label" for="email">Email</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="text-field text-field_floating-3">
+        <input class="text-field__input" formControlName="password" type="password" id="password" name="password" placeholder="Input password">
+        <label class="text-field__label" for="password">Password</label>
+      </div>
+    <div>
+      <button [disabled]="form.invalid" class="btn btn-primary">Sing in</button>
+    </div> {{ form.value.email }}
+      </div>
+  </form>
+ 
+</div>
+

@@ -1,0 +1,33 @@
+<div class="container">
+  <form  (ngSubmit)="onSubmit()" [formGroup]="formRegistr" class="text-center register-page block p-3 mt-3">
+    <h1 class="fs-3 mb-3">Registration</h1>
+   
+    
+      <div class="text-field text-field_floating-3 mb-3">
+        <input class="text-field__input" formControlName="name" type="text" id="name" name="name" placeholder="Input name">
+        <label class="text-field__label" for="email">Name</label>
+      </div>
+    
+    <div class="text-field text-field_floating-3 mb-3">
+      <input class="text-field__input" formControlName="lastName" type="text" id="lastName" name="lastName" placeholder="Input lastName">
+      <label class="text-field__label" for="email">Last name</label>
+    </div>
+
+    <div class="text-field text-field_floating-3 mb-3">
+      <input class="text-field__input" formControlName="email" type="email" id="email" name="email" placeholder="Input email">
+      <label class="text-field__label" for="email">Email</label>
+    </div>
+
+    <div class="text-field text-field_floating-3 mb-3">
+      <input class="text-field__input" formControlName="password" type="password" id="password" name="password" placeholder="Input password">
+      <label class="text-field__label" for="password">Password</label>
+    </div>
+    <div>
+      <button [disabled]="formRegistr.invalid" class="btn btn-primary">
+        Create Account
+      </button>
+    </div>
+
+   
+  </form>
+</div>

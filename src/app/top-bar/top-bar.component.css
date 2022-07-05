@@ -1,0 +1,18 @@
+
+.navbar{
+    background: linear-gradient(135deg,#0143a3,#0273d4);
+    color:white;
+   
+}
+.logo-header{
+    font-size: 24px;
+    color: white;
+}
+.header-nav{
+    margin-left: auto;
+}
+@media screen and (max-width: 769px){
+    .header-nav{
+        margin:0 auto;
+    }
+}
