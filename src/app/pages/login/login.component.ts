@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   form!: FormGroup;
   aSub!: Subscription;
 
-
   constructor(
     private auth: AuthService,
     private router: Router,
@@ -31,13 +30,11 @@ export class LoginComponent implements OnInit, OnDestroy {
       ]),
     });
 
-    this.route.queryParams.subscribe((params:Params)=>{
-if(params['registered']){}else if(params['accessDenied']){}
-
-
-console.log('Guard',this.auth.isAuthenticated())
-}
-    )
+    this.route.queryParams.subscribe((params: Params) => {
+      if (params['registered']) {
+      } else if (params['accessDenied']) {
+      }
+    });
   }
 
   ngOnDestroy(): void {
@@ -50,11 +47,10 @@ console.log('Guard',this.auth.isAuthenticated())
     this.aSub = this.auth.login(this.form.value).subscribe(
       (value) => {
         console.log('login success', value);
-        this.router.navigate(['/myPage'])
+        this.router.navigate(['/myPage']);
       },
       (error) => {
         console.warn(error);
-
       }
     );
   }

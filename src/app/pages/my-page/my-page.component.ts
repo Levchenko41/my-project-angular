@@ -35,8 +35,6 @@ export class MyPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.fetchUser(this.auth.getId()).subscribe((value: any) => {
-      console.log('value');
-      console.log(value);
       this.data=value
       this.cdr.detectChanges();
     });

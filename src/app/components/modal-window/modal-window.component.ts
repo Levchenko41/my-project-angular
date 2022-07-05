@@ -38,8 +38,6 @@ export class ModalWindowComponent implements OnInit {
       email: new FormControl(null, [Validators.required, Validators.email]),
     });
     this.auth.fetchUser(this.auth.getId()).subscribe((value: any) => {
-      console.log('value');
-      console.log(value);
       this.data=value
       this.cdr.detectChanges();
     });
@@ -52,7 +50,6 @@ export class ModalWindowComponent implements OnInit {
       this.formEdit.value.email,
       'USER'
     ).subscribe((value:any)=>{
-      console.log('valu2', value);
        this.route.navigate(['/myPage']);
     })
 

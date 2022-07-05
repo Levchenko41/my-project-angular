@@ -24,7 +24,6 @@ export class UserDataComponent implements OnInit {
   constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
-    console.log("ppppp", this.userData)
   }
 
 }

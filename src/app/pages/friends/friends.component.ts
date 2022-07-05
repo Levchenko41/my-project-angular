@@ -8,6 +8,7 @@ import { myFriends } from 'src/app/interfaces';
 })
 export class FriendsComponent implements OnInit {
 myFriends=myFriends
+pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
   constructor() { }
 
   ngOnInit(): void {

@@ -11,8 +11,7 @@ export class TopBarComponent implements OnInit {
   constructor(private auth: AuthService, private router: Router) {}
 
   ngOnInit(): void {
-    console.log(this.auth.isAuthenticated())
-    console.log(typeof this.auth.isAuthenticated())
+
   }
   signOut() {
     this.auth.logout();

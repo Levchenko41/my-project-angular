@@ -41,15 +41,11 @@ login(user:User):Observable<{token:string}> {
 
 getId(){
   this.data= jwt_decode(localStorage.getItem('auth-token')!)
-  console.log('id')
-  console.log(this.data.id)
  return this.data.id
 }
 
 
 getUserData(){
-  console.log('getUserData')
-  console.log(this.userData)
  return this.userData
 }
 

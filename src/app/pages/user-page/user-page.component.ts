@@ -18,8 +18,6 @@ data:any;
   const productIdFromRoute = Number(routeParams.get('userId'));
 
   this.auth.fetchUser(productIdFromRoute).subscribe((value: any) => {
-    console.log('value');
-    console.log(value);
     this.data=value
 
   });
